@@ -12,7 +12,7 @@ import com.bookClub.model.Book;
 import com.bookClub.service.Impl.RestBookDao;
 
 @Controller
-@RequestMapping("/")
+@RequestMapping()
 public class HomeController {
 
     RestBookDao bookDao = new RestBookDao();
