@@ -10,12 +10,12 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>BookClub</groupId>
-	<artifactId>BookClub_week10b</artifactId>
+	<artifactId>BookClub</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>BookClub_week8</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
-		<java.version>17</java.version>
+		<java.version>11</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
