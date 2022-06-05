@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+<meta charset="utf-8">
+
+</head>
+<body>
+
+
+	<header th:fragment="header">
+		
+
+		<!-- Navbar -->
+		<nav class="navbar navbar-expand-lg p-3 mb-2 bg-dark">
+			<div class="container-fluid ">
+				<a
+					class="navbar-brand  mb-2 mb-lg-0 text-capitalize fs-3s fw-bold text-success"
+					href="/">Bookclub</a>
+
+				<button class="navbar-toggler text-white" type="button"
+					data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+					aria-controls="navbarSupportedContent" aria-expanded="false"
+					aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarExample01">
+
+
+
+					<ul class="navbar-nav me-auto fs-5 fw-bold text-success">
+
+						<li class="nav-item text-success"><a class="nav-link"
+							href="/about" th:href="@{/about}">About</a></li>
+						<li class="nav-item text-success"><a class="nav-link"
+							href="/contact" th:href="@{/contact}">Contact</a></li>
+						<li class="nav-item text-success"><a class="nav-link"
+							href="/wishlist" th:href="@{/wishlist}">WishList</a></li>
+
+						<li class="nav-item"><a href="/swagger-ui.html"
+							class="nav-link" target="_blank">API-Link</a></li>
+
+						<!-- Restrict the visibility of this link to only admin users. -->
+						<li class="nav-item text-success" sec:authorize="hasRole('ADMIN')"><a
+							href="/monthly-books" class="nav-link"
+							th:href="@{/monthly-books}">Monthly Books</a></li>
+
+						<li class="nav-item text-success"><a href="/logout"
+							th:href="@{/logout}" class="nav-link right-end">Logout</a></li>
+
+
+					</ul>
+				</div>
+			</div>
+			<div class="nav-item float-end me-auto fs-5 fw-bold text-success">
+				<div sec:authorize="isAuthenticated()">
+					<strong sec:authentication="name"></strong>
+				</div>
+			
+		</nav>
+		</div>
+	</header>
+
+</body>
+</html>
+
+
+<!-- Retrieved from https://mdbootstrap.com/docs/standard/navigation/headers/#section-fixed-navbar -->

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Contact Us|Book Club</title>
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+	crossorigin="anonymous">
+
+
+</head>
+<body>
+	<div th:insert="~{fragments/header :: header}"></div>
+	
+	
+	<!-- Jumbotron -->
+	<div class="p-5 text-center bg-light" style="margin-top: 58px;">
+		<h1 class="mb-3">Book Club</h1>
+		<h4 class="mb-3">Inspiration through knowledge</h4>
+		
+
+	</div>
+	<!-- Jumbotron -->
+	<div class="container mt-5"><!-- https://www.w3schools.com/bootstrap5/tryit.asp?filename=trybs_default&stacked=h -->
+		<div class="row">
+			<div class="col-sm-4">
+				<h3>Address</h3>
+				<p>1000 Galvin Road South</p>
+				<p>Bellevue, Nebraska 68005</p>
+			</div>
+			<div class="col-sm-4">
+				<h3>Phone</h3>
+				<p>402.293.2000</p>
+				<p>1.800.756.7920</p>
+			</div>
+			<div class="col-sm-4">
+				<h3>Email</h3>
+				<p>BRUINSupportServices@bellevue.edu</p>
+				<p>library@bellevue.edu</p>
+			</div>
+		</div>
+	</div>
+
+
+	<div th:insert="~{fragments/footer :: footer}"></div>
+	<div th:insert="~{fragments/scriptfooter :: scriptfooter}"></div>
+
+</body>
+</html>
