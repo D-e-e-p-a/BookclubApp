@@ -12,13 +12,13 @@ import com.bookClub.model.Book;
 import com.bookClub.service.Impl.RestBookDao;
 
 @Controller
-@RequestMapping()
+@RequestMapping("/")
 public class HomeController {
 
     RestBookDao bookDao = new RestBookDao();
 	List<Book> books = bookDao.list();
 
-	@GetMapping
+	@GetMapping("/")
 	public String showHome(Model model) {
 		model.addAttribute("books", books);
 		return "index";
